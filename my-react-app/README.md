@@ -110,9 +110,3 @@ Or update these lines with the exact filenames found in that folder.
 - [src/assets/](src/assets/) (component images)
 
 ---
-
-## License
-Add a license if you plan to publish or share the project.
-```
-
-If you want, provide the exact filenames in the assets folder and I will update the README to reference them precisely.
