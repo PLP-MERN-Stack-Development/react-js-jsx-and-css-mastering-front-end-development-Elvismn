@@ -73,11 +73,10 @@ Other project files
 
 The project-root screenshots live in the `assets/` folder. GitHub will render images referenced with relative paths. Replace the filenames below to match the actual files in your `assets/` folder.
 
-Example embeds (update the filenames to match your files in `assets/`):
-
+Example embeds below:
 ![App - Dark mode](./assets/ReactDarkmode.png)
 ![App - Light mode](./assets/ReactLightmode.png)
-![Home / Features](./assets/screenshot-1.png)
+
 
 If you are not sure file names, list the assets folder in a terminal (Windows):
 
