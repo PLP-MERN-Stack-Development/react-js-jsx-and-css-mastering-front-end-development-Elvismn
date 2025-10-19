@@ -1,3 +1,4 @@
+```markdown
 # My React App
 
 Small Vite + React starter demonstrating Tailwind CSS, a theme provider, a reusable localStorage hook, a simple Task Manager (CRUD-ish) persisted to localStorage, and fetching paginated todos from an external API.
@@ -38,14 +39,14 @@ Theme & persistence
 - [`useLocalStorage`](src/hooks/useLocalStorage.js) hook implemented in [src/hooks/useLocalStorage.js](src/hooks/useLocalStorage.js)
 
 UI components (in [src/components/](src/components/))
-- [`Header`](src/components/Header.jsx) — [src/components/Header.jsx](src/components/Header.jsx)
-- [`Footer`](src/components/Footer.jsx) — [src/components/Footer.jsx](src/components/Footer.jsx)
-- [`Button`](src/components/Button.jsx) — [src/components/Button.jsx](src/components/Button.jsx)
-- [`Card`](src/components/Card.jsx) — [src/components/Card.jsx](src/components/Card.jsx)
+- [`Header`](src/components/Header.jsx)
+- [`Footer`](src/components/Footer.jsx)
+- [`Button`](src/components/Button.jsx)
+- [`Card`](src/components/Card.jsx)
 
 Feature components
-- [`TaskManager`](src/components/TaskManager.jsx) — [src/components/TaskManager.jsx](src/components/TaskManager.jsx)
-- [`ApiData`](src/components/ApiData.jsx) — [src/components/ApiData.jsx](src/components/ApiData.jsx)
+- [`TaskManager`](src/components/TaskManager.jsx)
+- [`ApiData`](src/components/ApiData.jsx)
 
 Other project files
 - [src/App.css](src/App.css)
@@ -58,30 +59,33 @@ Other project files
 ## Features & notes
 
 - Theme toggling:
-  - [`ThemeContext.ThemeProvider`](src/context/ThemeContext.jsx) toggles dark mode with `dark` class on the root html element and persists choice to localStorage via [`ThemeContext.useTheme`](src/context/ThemeContext.jsx).
+  - ThemeProvider toggles dark mode by applying the `dark` class to the root html element and persists the choice to localStorage.
 - Persistent tasks:
-  - [`useLocalStorage`](src/hooks/useLocalStorage.js) backs [`TaskManager`](src/components/TaskManager.jsx) so tasks persist across reloads.
+  - `useLocalStorage` backs `TaskManager` so tasks persist across reloads.
 - API data:
-  - [`ApiData`](src/components/ApiData.jsx) fetches todos from jsonplaceholder, implements search and simple pagination (10 items per page).
+  - `ApiData` fetches todos from jsonplaceholder, implements search and simple pagination (10 items per page).
 - Tailwind:
-  - Configured via [tailwind.config.js](tailwind.config.js) with `darkMode: 'class'` so theme toggling is manual.
+  - Configured via [tailwind.config.js](tailwind.config.js) with `darkMode: 'class'`.
 
 ---
 
 ## Screenshots / Evidence
 
-Project-root screenshots are available in the [assets/](assets/) folder — open that folder to view them. The app also references images in [src/assets/](src/assets/) (used by `Card` in [src/App.jsx](src/App.jsx)):
+The project-root screenshots live in the `assets/` folder. GitHub will render images referenced with relative paths. Replace the filenames below to match the actual files in your `assets/` folder.
 
-- Referenced images in [src/App.jsx](src/App.jsx):
-  - ../src/assets/React.jpg
-  - ../src/assets/tailwind.jpg
-  - ../src/assets/React-JS-component-1.png
+Example embeds (update the filenames to match your files in `assets/`):
 
-Embed examples 
-```markdown
-![App screenshot 1](./assets/ReactDarkmode.png)
-![App screenshot 2](./assets/ReactLightmode.png)
+![App - Dark mode](./assets/ReactDarkmode.png)
+![App - Light mode](./assets/ReactLightmode.png)
+![Home / Features](./assets/screenshot-1.png)
+
+If you are not sure file names, list the assets folder in a terminal (Windows):
+
+```powershell
+dir .\assets\
 ```
+
+Or update these lines with the exact filenames found in that folder.
 
 ---
 
@@ -108,4 +112,8 @@ Embed examples
 
 ---
 
+## License
 Add a license if you plan to publish or share the project.
+```
+
+If you want, provide the exact filenames in the assets folder and I will update the README to reference them precisely.
