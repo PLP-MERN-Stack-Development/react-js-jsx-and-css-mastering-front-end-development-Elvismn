@@ -1,16 +1,111 @@
-# React + Vite
+# My React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Small Vite + React starter demonstrating Tailwind CSS, a theme provider, a reusable localStorage hook, a simple Task Manager (CRUD-ish) persisted to localStorage, and fetching paginated todos from an external API.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Quick start
 
-## React Compiler
+```bash
+# install
+npm install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# start dev server
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Open http://localhost:5173
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## What’s included (files & key symbols)
+
+Core config
+- [vite.config.js](vite.config.js)
+- [tailwind.config.js](tailwind.config.js)
+- [postcss.config.js](postcss.config.js)
+- [eslint.config.js](eslint.config.js)
+- [index.html](index.html)
+- [package.json](package.json)
+
+App entry & styles
+- [src/main.jsx](src/main.jsx) — app root and provider mount
+- [src/index.css](src/index.css)
+- [src/App.jsx](src/App.jsx)
+
+Theme & persistence
+- [`ThemeContext.ThemeProvider`](src/context/ThemeContext.jsx) and [`ThemeContext.useTheme`](src/context/ThemeContext.jsx) implemented in [src/context/ThemeContext.jsx](src/context/ThemeContext.jsx)
+- [`useLocalStorage`](src/hooks/useLocalStorage.js) hook implemented in [src/hooks/useLocalStorage.js](src/hooks/useLocalStorage.js)
+
+UI components (in [src/components/](src/components/))
+- [`Header`](src/components/Header.jsx) — [src/components/Header.jsx](src/components/Header.jsx)
+- [`Footer`](src/components/Footer.jsx) — [src/components/Footer.jsx](src/components/Footer.jsx)
+- [`Button`](src/components/Button.jsx) — [src/components/Button.jsx](src/components/Button.jsx)
+- [`Card`](src/components/Card.jsx) — [src/components/Card.jsx](src/components/Card.jsx)
+
+Feature components
+- [`TaskManager`](src/components/TaskManager.jsx) — [src/components/TaskManager.jsx](src/components/TaskManager.jsx)
+- [`ApiData`](src/components/ApiData.jsx) — [src/components/ApiData.jsx](src/components/ApiData.jsx)
+
+Other project files
+- [src/App.css](src/App.css)
+- [src/assets/](src/assets/) (images referenced by components)
+- [assets/](assets/) (project-root assets / screenshots)
+- [public/](public/)
+
+---
+
+## Features & notes
+
+- Theme toggling:
+  - [`ThemeContext.ThemeProvider`](src/context/ThemeContext.jsx) toggles dark mode with `dark` class on the root html element and persists choice to localStorage via [`ThemeContext.useTheme`](src/context/ThemeContext.jsx).
+- Persistent tasks:
+  - [`useLocalStorage`](src/hooks/useLocalStorage.js) backs [`TaskManager`](src/components/TaskManager.jsx) so tasks persist across reloads.
+- API data:
+  - [`ApiData`](src/components/ApiData.jsx) fetches todos from jsonplaceholder, implements search and simple pagination (10 items per page).
+- Tailwind:
+  - Configured via [tailwind.config.js](tailwind.config.js) with `darkMode: 'class'` so theme toggling is manual.
+
+---
+
+## Screenshots / Evidence
+
+Project-root screenshots are available in the [assets/](assets/) folder — open that folder to view them. The app also references images in [src/assets/](src/assets/) (used by `Card` in [src/App.jsx](src/App.jsx)):
+
+- Referenced images in [src/App.jsx](src/App.jsx):
+  - ../src/assets/React.jpg
+  - ../src/assets/tailwind.jpg
+  - ../src/assets/React-JS-component-1.png
+
+Embed examples 
+```markdown
+![App screenshot 1](assets/ReactDarkmode.png)
+![App screenshot 2](assets/ReactLightmode.png)
+```
+
+---
+
+## Quick file map (click to open)
+- [vite.config.js](vite.config.js)
+- [tailwind.config.js](tailwind.config.js)
+- [postcss.config.js](postcss.config.js)
+- [eslint.config.js](eslint.config.js)
+- [index.html](index.html)
+- [package.json](package.json)
+- [src/main.jsx](src/main.jsx)
+- [src/index.css](src/index.css)
+- [src/App.jsx](src/App.jsx)
+- [src/context/ThemeContext.jsx](src/context/ThemeContext.jsx)
+- [src/hooks/useLocalStorage.js](src/hooks/useLocalStorage.js)
+- [src/components/Header.jsx](src/components/Header.jsx)
+- [src/components/Footer.jsx](src/components/Footer.jsx)
+- [src/components/Button.jsx](src/components/Button.jsx)
+- [src/components/Card.jsx](src/components/Card.jsx)
+- [src/components/TaskManager.jsx](src/components/TaskManager.jsx)
+- [src/components/ApiData.jsx](src/components/ApiData.jsx)
+- [assets/](assets/) (project screenshots)
+- [src/assets/](src/assets/) (component images)
+
+---
+
+Add a license if you plan to publish or share the project.
