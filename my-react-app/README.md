@@ -79,8 +79,8 @@ Project-root screenshots are available in the [assets/](assets/) folder — open
 
 Embed examples 
 ```markdown
-![App screenshot 1](assets/ReactDarkmode.png)
-![App screenshot 2](assets/ReactLightmode.png)
+![App screenshot 1](./assets/ReactDarkmode.png)
+![App screenshot 2](./assets/ReactLightmode.png)
 ```
 
 ---
