@@ -1,4 +1,3 @@
-```markdown
 # My React App
 
 Small Vite + React starter demonstrating Tailwind CSS, a theme provider, a reusable localStorage hook, a simple Task Manager (CRUD-ish) persisted to localStorage, and fetching paginated todos from an external API.
@@ -7,7 +6,7 @@ Small Vite + React starter demonstrating Tailwind CSS, a theme provider, a reusa
 
 ## Quick start
 
-```bash
+```markdown
 # install
 npm install
 
@@ -15,10 +14,11 @@ npm install
 npm run dev
 ```
 
+Then
+
 Open http://localhost:5173
 
 ---
-
 ## What’s included (files & key symbols)
 
 Core config
