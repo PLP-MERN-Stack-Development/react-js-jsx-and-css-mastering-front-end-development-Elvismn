@@ -3,7 +3,12 @@ import Footer from "./components/Footer";
 import Button from "./components/Button";
 import Card from "./components/Card";
 import TaskManager from "./components/taskManager";
-import ApiData from "./components/ApiData"; // ✅ New import
+import ApiData from "./components/ApiData";
+
+// ✅ Importing images properly so they appear after deployment
+import reactImg from "./assets/React.jpg";
+import tailwindImg from "./assets/tailwind.jpg";
+import componentsImg from "./assets/React-JS-component-1.png";
 
 function App() {
   const handleClick = () => {
@@ -31,17 +36,17 @@ function App() {
           <Card
             title="Learning React"
             description="React helps you build reusable UI components efficiently."
-            image="../src/assets/React.jpg"
+            image={reactImg}
           />
           <Card
             title="Styling with Tailwind"
             description="Tailwind CSS allows rapid styling with utility-first classes."
-            image="../src/assets/tailwind.jpg"
+            image={tailwindImg}
           />
           <Card
             title="Reusable Components"
             description="Components make your app easier to maintain and scale."
-            image="../src/assets/React-JS-component-1.png"
+            image={componentsImg}
           />
         </div>
 

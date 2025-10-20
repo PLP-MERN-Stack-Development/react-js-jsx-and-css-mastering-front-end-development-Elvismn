@@ -110,3 +110,4 @@ Or update these lines with the exact filenames found in that folder.
 - [src/assets/](src/assets/) (component images)
 
 ---
+The site is live at: https://week3mern.netlify.app/
